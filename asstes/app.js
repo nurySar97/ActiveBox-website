@@ -2,8 +2,8 @@ $(function () {
   // HEADER
   const header = $("#header");
   const intro = $("#intro");
-  const introH = intro.innerHeight();
-  const scrollPos = $(window).scrollTop();
+  let introH = intro.innerHeight();
+  let scrollPos = $(window).scrollTop();
 
   checkScroll(scrollPos, introH);
 
@@ -26,7 +26,6 @@ $(function () {
 
   $("[data-scroll]").on("click", function (event) {
     event.preventDefault();
-
     const elementId = $(this).data("scroll");
     const elementOffset = $(elementId).offset().top;
 

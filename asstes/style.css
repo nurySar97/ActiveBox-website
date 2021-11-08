@@ -410,25 +410,23 @@ p {
 }
 
 .reviews__photo {
-    width: 50%;
-    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
     position: relative;
+    flex: 1;
 }
 
 .reviews__img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: 1;
-
-    transform: translateY(-50%);
+    width: 100%;
 }
 
 .reviews__content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
     padding-left: 80px;
 }
 
@@ -629,10 +627,8 @@ p {
     }
 }
 
-@media (max-width:991px) {
-
+@media (max-width: 992px) {
     /* NAV */
-
     .nav {
         display: none;
         position: absolute;
@@ -651,11 +647,12 @@ p {
     }
 
     .nav__link {
+        text-align: center;
         padding: 10px 15px;
+        margin: 0;
     }
 
     /* Burger */
-
     .burger {
         display: block;
     }
@@ -694,7 +691,7 @@ p {
     .reviews__photo {
         width: 100%;
         overflow: hidden;
-        margin: 15px 0 40px;
+        margin: 0 1rem 0;
     }
 
     .reviews__content {
@@ -726,9 +723,7 @@ p {
 
         margin-bottom: 30px;
     }
-
     /* FEATURES */
-
     .features {
         margin: 40px 0;
     }
@@ -738,10 +733,7 @@ p {
         padding-left: 0;
         padding-right: 0;
     }
-
     /* Team */
-
-
     .team {
         margin: 60px 0 30px;
     }
@@ -751,65 +743,44 @@ p {
 
         text-align: center;
     }
-
     /* WORKS */
-
     .works__item {
         width: 100%;
         height: 300px;
     }
-
     /* REVIEWS */
-
-    .reviews__text {
-        font-size: 25px;
+    .reviews__item {
+        padding: 1rem 0;
     }
-
+    .reviews__photo {
+        flex: none;
+        margin: 0;
+        margin-bottom: 1rem;
+        min-height: auto;
+    }
     /* BTN */
 
     .btn--long {
         min-width: 260px;
     }
-
     /* Download */
     .download {
         margin: 50px 0;
     }
-
     .download__title {
         font-size: 24px;
     }
-
     /* FOOTER */
-
     .footer__inner {
         padding: 30px 0;
     }
-
     .footer__block {
         width: 100%;
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 30px;
     }
-
     .footer__block:last-child {
         margin-bottom: 0;
-    }
-}
-
-@media (max-width:414px) {
-
-    /* Reviews */
-
-    .reviews__photo {
-        margin: 0px 0 -160px;
-    }
-
-    .reviews__img {
-
-        width: 400px;
-        height: 300px;
-        margin: -84px 0 -78px
     }
 }
